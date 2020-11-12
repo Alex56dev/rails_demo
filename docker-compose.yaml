@@ -8,3 +8,16 @@ services:
       - .:/app
     ports:
       - 3000:3000
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12.4-alpine
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: demo
+      POSTGRES_DB: demo_db
+    volumes:
+      - ./docker/postgres/data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
