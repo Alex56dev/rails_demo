@@ -18,6 +18,6 @@ services:
       POSTGRES_USER: demo
       POSTGRES_DB: demo_db
     volumes:
-      - ./docker/postgres/data:/var/lib/postgresql/data
+      - ~/docker/rails-demo/postgres/data:/var/lib/postgresql/data
     ports:
       - 5432:5432
