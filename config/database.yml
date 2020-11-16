@@ -7,3 +7,13 @@ development:
   username: demo
   password: password
   host: db
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: demo_db_test
+  pool: 5
+  timeout: 5000
+  username: demo
+  password: password
+  host: db
